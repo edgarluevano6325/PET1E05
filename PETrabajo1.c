@@ -5,27 +5,49 @@
 #define MAXFIL 2
 
 void mostrarMenu(int *);
-void llenarMatriz(int [MAXFIL][MAXCOL]);
-void mostrarMatriz(int [MAXFIL][MAXCOL]);
+void menuOpciones(int, int matriz[MAXFIL][MAXCOL]);
+void llenarMatriz(int matriz[MAXFIL][MAXCOL]);
+void mostrarMatriz(int matriz[MAXFIL][MAXCOL]);
 
 
 int main()
 {
     int matriz[MAXFIL][MAXCOL];
-    int *peMenu;
+    int opc;
+    int *peMenu = &opc;
 
-
-    llenarMatriz(matriz);
-    mostrarMatriz(matriz);
+    do
+    {
+        mostrarMenu(peMenu);
+        menuOpciones(opc, matriz);
+    } while (opc != 7);
+    
+    
 
 
 }
 
-void mostrarMenu(int *){
+void mostrarMenu(int *opc){
     printf("\tmenu\n");
     printf("1) llenar matriz");
     printf("2) mostrar matriz");
+    printf("ingresa la opcion: ");
+    scanf("%d", opc);
 }
+void menuOpciones(int opc, int matriz[MAXFIL][MAXCOL] )
+{
+    switch (opc)
+    {
+        case 1: llenarMatriz(matriz);break;
+        case 2: mostrarMatriz(matriz);break;
+            
+        
+        default: printf("opcion no valida");break;
+            
+    }
+}
+
+
 
 void llenarMatriz(int matriz[MAXFIL][MAXCOL] ){
     for (int i = 0; i < MAXCOL; i++)
