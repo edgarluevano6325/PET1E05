@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
 
-#define MAXCOL 2
-#define MAXFIL 2
+#define MAXCOL 4
+#define MAXFIL 4
 
 void mostrarMenu(int *);
 void menuOpciones(int, int matriz[MAXFIL][MAXCOL]);
@@ -72,4 +72,5 @@ void mostrarMatriz(int matriz[MAXFIL][MAXCOL]){
     printf("\n");
 
 }
+
 
