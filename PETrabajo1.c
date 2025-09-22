@@ -23,7 +23,7 @@ int main()
     } while (opc != 7);
     
     
-
+    return 0;
 
 }
 
@@ -72,3 +72,4 @@ void mostrarMatriz(int matriz[MAXFIL][MAXCOL]){
     printf("\n");
 
 }
+
